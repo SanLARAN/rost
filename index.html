@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ROST Clicker</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preload" href="assets/audio/click.mp3" as="audio">
+  <link rel="preload" href="assets/audio/keyboard.mp3" as="audio">
+  <link rel="preload" href="assets/audio/boss.mp3" as="audio">
+</head>
+<body>
+  <div id="game">
+    <img src="assets/images/background.png" id="background" alt="background" />
+    <div id="ui">
+      <div id="top-bar">
+        <img src="assets/images/character.gif" id="character" alt="char" />
+        <div id="shift-info">
+          <div id="timer">Смена: 30</div>
+          <div id="break" class="hidden">Перерыв!</div>
+        </div>
+      </div>
+      <div id="clicks">Клики: 0</div>
+      <div id="adhd-bar">
+        <div id="adhd-fill"></div>
+      </div>
+      <button id="click-btn">
+        <img src="assets/images/click-button.png" alt="КЛАЦ" />
+      </button>
+      <div id="boss-alert" class="hidden">
+        <img src="assets/images/boss.png" alt="Босс орёт" />
+      </div>
+      <div id="upgrades">
+        <img src="assets/images/upgrade-1.png" class="upgrade" data-upgrade="1" title="+1 клик" />
+        <img src="assets/images/upgrade-2.png" class="upgrade" data-upgrade="2" title="+5 сек к смене" />
+        <img src="assets/images/upgrade-3.png" class="upgrade" data-upgrade="3" title="Медленнее СДВГ" />
+      </div>
+    </div>
+  </div>
+  <audio id="click-sound" src="assets/audio/click.mp3"></audio>
+  <audio id="keyboard-sound" src="assets/audio/keyboard.mp3"></audio>
+  <audio id="boss-sound" src="assets/audio/boss.mp3"></audio>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
